@@ -157,33 +157,6 @@ body {
   margin: 2rem 0;
 }
 
-.social-links a,
-.extra-social-links a {
-  text-decoration: none;
-  margin: 0 0.5rem;
-  color: #333;
-  font-size: 1.1rem;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover,
-.extra-social-links a:hover {
-  color: #e94e77;
-}
-
-.extra-social-links {
-  text-align: center;
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.extra-social-links a {
-  text-transform: uppercase;
-}
-
 .footer-box {
   text-align: center;
   background-color: #f2f2f2;
