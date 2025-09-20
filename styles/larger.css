@@ -1,0 +1,174 @@
+body {
+  font-family: 'Cossette Titre', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 1rem;
+}
+
+.site-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+#menuButton {
+  display: none;
+}
+
+.nav-bar {
+  background-color: #222;
+}
+
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 2rem;
+}
+
+.nav-bar li {
+  margin-right: 2rem;
+}
+
+.nav-bar .nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.3rem 0.5rem;
+}
+
+.nav-bar .nav-btn:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+.page-title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+}
+
+.main-info {
+  display: flex;
+  gap: 2rem;
+  padding: 0 2rem 2rem 2rem;
+}
+
+.about-me-section {
+  flex: 2;
+}
+
+.student-photo-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-black {
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+}
+
+.write-box {
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  height: 200px;
+  width: 100%;
+  padding: 0.2rem;
+  overflow-y: auto;
+}
+
+.photo-box {
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.courses-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.line-black.full-width {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.course-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.course-buttons button {
+  flex: 1;
+  max-width: 150px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  border: 1px solid #222;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.course-buttons button:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+#totalCredits {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.social-links {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.footer-box {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  font-weight: normal;
+}
+
+.footer-box p {
+  margin: 0.3rem 0;
+}
