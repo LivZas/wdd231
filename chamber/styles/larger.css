@@ -1,0 +1,141 @@
+body {
+  font-family: 'Cossette Titre', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.site-name {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+#menuButton {
+  display: none;
+}
+.nav-bar {
+  display: block;
+}
+.nav-bar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+}
+.nav-bar li {
+  margin-left: 2rem;
+}
+.nav-bar a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 4px;
+}
+.nav-bar a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.nav-bar a:hover::after {
+  width: 100%;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.hero img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+.page-title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f2f2f2;
+  padding: 2rem;
+  gap: 1rem;
+}
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-left p,
+.footer-right p {
+  margin: 0.2rem 0;
+}
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-center a img {
+  width: 64px;
+  height: 64px;
+}
+.members.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin: 2rem 0;
+}
+.members section {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.members img {
+  width: auto;
+  height: 100px;
+  margin-bottom: 0.5rem;
+}
+.members h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+.members p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+.members a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: navy;
+  font-weight: bold;
+  text-decoration: none;
+}
+.members a:hover {
+  text-decoration: underline;
+}
