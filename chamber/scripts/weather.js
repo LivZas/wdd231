@@ -5,13 +5,32 @@ const apiKey = "92d1e82115c7eb1b2692c239e7e1b017";
 const city = "Caracas";
 const units = "metric";
 
+const weatherEmojis = {
+  Clear: "☀️",
+  Clouds: "☁️",
+  Rain: "🌧️",
+  Drizzle: "🌦️",
+  Thunderstorm: "⛈️",
+  Snow: "❄️",
+  Mist: "🌫️",
+  Smoke: "💨",
+  Haze: "🌫️",
+  Dust: "🌪️",
+  Fog: "🌫️",
+  Sand: "🌪️",
+  Ash: "🌋",
+  Squall: "🌬️",
+  Tornado: "🌪️"
+};
+
 const currentWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
 
 fetch(currentWeatherURL)
   .then(response => response.json())
   .then(data => {
-    const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    const main = data.weather[0].main;
+    const emoji = weatherEmojis[main] || "❓";
     const description = data.weather[0].description;
     const temp = data.main.temp.toFixed(1);
     const tempMin = data.main.temp_min.toFixed(1);
@@ -21,7 +40,7 @@ fetch(currentWeatherURL)
     const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     currentWeatherContainer.innerHTML = `
-      <img src="${icon}" alt="${description}">
+      <div class="weather-emoji">${emoji}</div>
       <p><strong>${temp}°C</strong> - ${description.charAt(0).toUpperCase() + description.slice(1)}</p>
       <p>High: ${tempMax}°C | Low: ${tempMin}°C</p>
       <p>Humidity: ${humidity}%</p>
@@ -37,14 +56,15 @@ fetch(forecastURL)
     forecastContainer.innerHTML = forecastList.map(item => {
       const date = new Date(item.dt_txt);
       const day = date.toLocaleDateString("en-US", { weekday: "long" });
-      const icon = `https://openweathermap.org/img/wn/${item.weather[0].icon}.png`;
+      const main = item.weather[0].main;
+      const emoji = weatherEmojis[main] || "❓";
       const description = item.weather[0].description;
       const temp = item.main.temp.toFixed(1);
 
       return `
         <div>
           <p><strong>${day}</strong></p>
-          <img src="${icon}" alt="${description}" title="${description}">
+          <div class="weather-emoji">${emoji}</div>
           <p>${temp}°C</p>
         </div>
       `;

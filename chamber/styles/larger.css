@@ -276,40 +276,47 @@ body {
 
 .info-content {
   background-color: #eee;
-  padding: 1.2rem;
+  padding: 1rem;
   overflow-y: auto;
   flex-grow: 1;
   min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 0.3rem;
 }
 
-#current-weather, #weather-forecast {
+#current-weather,
+#weather-forecast {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
+  margin: 0;
+  padding: 0;
 }
 
-#weather-forecast div {
-  border-top: 1px solid #ccc;
-  padding-top: 0.5rem;
+#current-weather p,
+#weather-forecast p {
+  margin: 0.1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.2;
 }
 
 #weather-forecast {
-  display: flex;
+  flex-direction: row;
   justify-content: space-around;
   width: 100%;
 }
 
 #weather-forecast div {
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 
-#weather-forecast img {
-  width: 50px;
-  height: 50px;
+.weather-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0;
 }
