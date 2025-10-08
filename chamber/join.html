@@ -1,0 +1,201 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="A website about Caracas with useful information."> 
+  <meta name="author" content="Lievelyn Zapata"> 
+  <title>Caracas Chamber of Commerce</title> 
+  <meta property="og:title" content="Caracas Chamber of Commerce"> 
+  <meta property="og:description" content="A website about Caracas with useful information."> 
+  <meta property="og:image" content="https://github.com/LivZas/wdd231/blob/main/chamber/images/caracas.jpg"> 
+  <meta property="og:url" content="https://livzas.github.io/wdd231/chamber/"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)"> 
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)"> 
+  <script src="scripts/navigation.js" defer></script> 
+  <script src="scripts/date.js" defer></script> 
+  <script src="data/members.js" defer></script> 
+  <link rel="icon" href="images/favicon.ico"> 
+</head> 
+<body> 
+  <header> 
+    <div class="header-top"> 
+      <img src="images/logo.svg" alt="Site Logo" class="logo"> 
+      <span class="site-name">Caracas Chamber of Commerce</span> 
+      <button id="menuButton" aria-label="Toggle Menu">☰</button> 
+      <nav id="navMenu" class="nav-bar"> 
+        <ul> 
+          <li><a href="index.html">Home</a></li> 
+          <li><a href="discover.html">Discover</a></li> 
+          <li><a href="directory.html">Directory</a></li> 
+          <li><a href="join.html">Join</a></li> 
+        </ul> 
+      </nav> 
+    </div> 
+  </header> 
+  <main class="container"> 
+    <section class="hero"> 
+      <img src="images/caracas.jpg" alt="caracas image"> 
+    </section> 
+    <h1 class="page-title">Join</h1>
+
+    <section class="membership-application">
+  <div class="form-and-cards">
+    <form id="joinForm" method="get" action="thankyou.html">
+    <h2>Apply for Membership</h2>
+
+    <label>
+        First Name:
+        <input type="text" name="firstName" title="Your First Name" autocomplete="given-name" required>
+      </label>
+
+      <label>
+        Last Name:
+        <input type="text" name="lastName" title="Your Last Name" autocomplete="family-name" required>
+      </label>
+
+      <label>
+        Organization Title:
+        <input type="text" name="orgTitle" title="Your Title in Organization" autocomplete="organization-title" pattern="[A-Za-z\\s\\-]{7,}">
+      </label>
+
+      <label>
+        Email:
+        <input type="email" name="email" title="Your Email" autocomplete="email" placeholder="example@domain.com" required>
+      </label>
+
+      <label>
+        Phone Number:
+        <input type="tel" name="phone" title="Phone Number" autocomplete="tel" required>
+      </label>
+
+      <label>
+        Business/Organization Name:
+        <input type="text" name="organization" title="Business or Organization Name" autocomplete="organization" required>
+      </label>
+
+      <label>
+        Business/Organization Description:
+        <textarea name="description" rows="4" title="Describe your business or organization"></textarea>
+      </label>
+
+      <label>
+        Membership Level:
+        <select name="membership" required title="Select Membership Level">
+          <option value="">Select One</option>
+          <option value="NP">NP</option>
+          <option value="Bronze">Bronze</option>
+          <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
+        </select>
+    </label>
+
+      <input type="hidden" name="timestamp" id="formTimestamp">
+      <input type="submit" value="Submit">
+    </form>
+
+    <div class="membership-cards-container">
+      <div class="membership-card" style="animation-delay: 0s;">
+        <h3>NP Membership</h3>
+        <p>No fee. For non-profit organizations.</p>
+        <a href="#" onclick="openModal('npModal')">View Benefits</a>
+      </div>
+      <div class="membership-card" style="animation-delay: 0.2s;">
+        <h3>Bronze Membership</h3>
+        <p>Basic membership level with standard visibility.</p>
+        <a href="#" onclick="openModal('bronzeModal')">View Benefits</a>
+      </div>
+      <div class="membership-card" style="animation-delay: 0.4s;">
+        <h3>Silver Membership</h3>
+        <p>Extended benefits including events and more.</p>
+        <a href="#" onclick="openModal('silverModal')">View Benefits</a>
+      </div>
+      <div class="membership-card" style="animation-delay: 0.6s;">
+        <h3>Gold Membership</h3>
+        <p>All benefits, premium exposure and discounts.</p>
+        <a href="#" onclick="openModal('goldModal')">View Benefits</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="npModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('npModal')">&times;</span>
+    <h3>NP Membership Benefits</h3>
+    <ul>
+      <li>Free listing</li>
+      <li>Community events</li>
+      <li>Networking</li>
+    </ul>
+  </div>
+</div>
+
+<div id="bronzeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+    <h3>Bronze Membership Benefits</h3>
+    <ul>
+      <li>Directory listing</li>
+      <li>Event access</li>
+      <li>Newsletter mentions</li>
+    </ul>
+  </div>
+</div>
+
+<div id="silverModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('silverModal')">&times;</span>
+    <h3>Silver Membership Benefits</h3>
+    <ul>
+      <li>All Bronze benefits</li>
+      <li>Homepage spotlight</li>
+      <li>Special events</li>
+    </ul>
+  </div>
+</div>
+
+<div id="goldModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('goldModal')">&times;</span>
+    <h3>Gold Membership Benefits</h3>
+    <ul>
+      <li>All Silver benefits</li>
+      <li>Priority listings</li>
+      <li>Event sponsorships</li>
+    </ul>
+  </div>
+</div>
+
+  </main> 
+  <footer> 
+    <div class="footer-container"> 
+      <div class="footer-left"> 
+        <p>Caracas Chamber of Commerce</p> 
+        <p>Caracas</p> 
+        <p>Distrito Capital, Caracas 1050</p> 
+        <p>(+58) xxx-xxxx</p> 
+      </div> 
+      <div class="footer-center"> 
+        <a href="https://github.com/LivZas/" target="_blank"> 
+          <img src="images/github-logo.svg" alt="GitHub Logo"> 
+        </a> 
+        <a href="https://www.linkedin.com/in/lievelyn-zapata-66409628a/" target="_blank"> 
+          <img src="images/linkedin-logo.svg" alt="LinkedIn"> 
+        </a> 
+        <a href="https://www.facebook.com/" target="_blank"> 
+          <img src="images/facebook-logo.svg" alt="Facebook"> 
+        </a> 
+      </div> 
+      <div class="footer-right"> 
+        <p>WDD231 Class Project</p> 
+        <p>Lievelyn Zapata</p> 
+        <p>&copy; <span id="currentyear"></span> Caracas Chamber of Commerce</p> 
+        <p id="lastModified"></p> 
+      </div> 
+    </div> 
+  </footer> 
+</body> 
+</html>

@@ -72,3 +72,46 @@ function displaySpotlights() {
 }
 
 displaySpotlights();
+
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const formTimestampInput = document.getElementById('formTimestamp');
+  if (formTimestampInput) {
+    const timestamp = new Date().toISOString();
+    formTimestampInput.value = timestamp;
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  const firstName = document.getElementById("firstName");
+  const lastName = document.getElementById("lastName");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+  const organization = document.getElementById("organization");
+  const timestampEl = document.getElementById("timestamp");
+
+  if (firstName) firstName.textContent = params.get("firstName") || "";
+  if (lastName) lastName.textContent = params.get("lastName") || "";
+  if (email) email.textContent = params.get("email") || "";
+  if (phone) phone.textContent = params.get("phone") || "";
+  if (organization) organization.textContent = params.get("organization") || "";
+
+  const rawTimestamp = params.get("timestamp");
+  if (rawTimestamp && timestampEl) {
+    const dateObj = new Date(rawTimestamp);
+    const year = dateObj.getUTCFullYear();
+    const month = String(dateObj.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(dateObj.getUTCDate()).padStart(2, '0');
+    const hour = String(dateObj.getUTCHours()).padStart(2, '0');
+    const minutes = String(dateObj.getUTCMinutes()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day} ${hour}:${minutes} UTC`;
+    timestampEl.textContent = formattedDate;
+  }
+});
