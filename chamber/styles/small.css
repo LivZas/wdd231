@@ -389,3 +389,71 @@ form#joinForm label {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.places-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.place-card {
+  display: grid;
+  grid-template-areas: 
+    "image"
+    "content";
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.place-card img {
+  grid-area: image;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.place-card .content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.place-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.place-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.place-card .source {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.learn-more {
+  align-self: flex-start;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #333;
+}
+

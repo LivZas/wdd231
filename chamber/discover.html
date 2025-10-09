@@ -13,11 +13,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)"> 
+  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 600px) and (max-width: 1023px)">
   <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)"> 
   <script src="scripts/navigation.js" defer></script> 
   <script src="scripts/date.js" defer></script> 
-  <script src="data/members.js" defer></script> 
+  <script src="data/members.js" defer></script>
+  <script src="data/places.js" defer></script>
+  <script src="data/lastvisit.js" defer></script>
   <link rel="icon" href="images/favicon.ico"> 
 </head> 
 <body> 
@@ -42,6 +45,11 @@
     </section> 
     <h1 class="page-title">Discover</h1> 
     
+<div id="visit-message" class="visit-message"></div>
+
+<section class="places-grid" id="places-container">
+</section>
+
   </main> 
   <footer> 
     <div class="footer-container"> 
