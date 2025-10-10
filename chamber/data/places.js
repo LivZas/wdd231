@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card.classList.add("place-card");
 
         card.innerHTML = `
-          <img src="${place.image}" alt="${place.alt}"> 
+          <img src="${place.image}" alt="${place.alt}" loading="lazy"> 
           <div class="content">
             <h2>${place.title}</h2>
             <p>${place.description}</p>
