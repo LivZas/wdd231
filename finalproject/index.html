@@ -1,0 +1,166 @@
+<!DOCTYPE html>  
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="description" content="A website dedicated to dogs."> 
+  <meta name="author" content="Lievelyn Zapata"> 
+  <title>Our Dog Friends</title> 
+  <meta property="og:title" content="Our Dog Friends"> 
+  <meta property="og:description" content="A website dedicated to dogs."> 
+  <meta property="og:image" content="https://github.com/LivZas/wdd231/blob/main/chamber/images/caracas.jpg"> 
+  <meta property="og:url" content="https://livzas.github.io/wdd231/chamber/"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)"> 
+  <script src="scripts/navigation.js" defer></script> 
+  <script src="scripts/date.js" defer></script> 
+  <script src="data/members.js" defer></script>
+  <script src="data/places.js" defer></script>
+  <script src="data/lastvisit.js" defer></script>
+  <link rel="icon" href="images/favicon.ico"> 
+</head> 
+<body> 
+  <header> 
+    <div class="header-top"> 
+      <img src="images/logo.webp" alt="Site Logo" class="logo" style="width: 80px; height: auto;">
+      <span class="site-name">Our Dog Friends</span> 
+      <button id="menuButton" aria-label="Toggle Menu">☰</button> 
+      <nav id="navMenu" class="nav-bar"> 
+        <ul> 
+          <li><a href="index.html">Home</a></li> 
+          <li><a href="discover.html">Discover</a></li> 
+          <li><a href="join.html">Join</a></li> 
+        </ul> 
+      </nav> 
+    </div> 
+  </header> 
+  <main class="container"> 
+    <section class="hero"> 
+      <img src="images/hero-image.webp" alt="hero image"> 
+    </section> 
+    <h1 class="page-title">Home</h1> 
+
+    <section class="intro-card">
+      <h2>Welcome to Our Dog Friends</h2>
+      <p>This website is dedicated to sharing information about different dog breeds. Discover your new favorite breed!</p>
+      <p>Here you will be able to see some breeds that you may like!</p>
+    </section>
+
+    <section class="dog-grid">
+      <div class="dog-card">
+        <div class="dog-name">Labrador Retriever</div>
+        <div class="dog-image">
+          <img src="images/labrador-retriever.webp" alt="Labrador Retriever">
+        </div>
+        <div class="dog-info">
+          <p>Very friendly, it's perfect for families!</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">German Shepherd</div>
+        <div class="dog-image">
+          <img src="images/german-shepherd.webp" alt="German Shepherd">
+        </div>
+        <div class="dog-info">
+          <p>Brave, loyal and intelligent.</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Golden Retriever</div>
+        <div class="dog-image">
+          <img src="images/golden-retriever.webp" alt="Golden Retriever">
+        </div>
+        <div class="dog-info">
+          <p>The perfect company, very playful.</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Bulldog</div>
+        <div class="dog-image">
+          <img src="images/bulldog.webp" alt="Bulldog">
+        </div>
+        <div class="dog-info">
+          <p>Small and calm, a nice buddy.</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Beagle</div>
+        <div class="dog-image">
+          <img src="images/beagle.webp" alt="Beagle">
+        </div>
+        <div class="dog-info">
+          <p>Curious and friendly. Full of energy!</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Basenji</div>
+        <div class="dog-image">
+          <img src="images/basenji.webp" alt="Basenji">
+        </div>
+        <div class="dog-info">
+          <p>Elegant, smart and a good company.</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Boxer</div>
+        <div class="dog-image">
+          <img src="images/boxer.webp" alt="Boxer">
+        </div>
+        <div class="dog-info">
+          <p>Strong, energetic friend!</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Chihuahua</div>
+        <div class="dog-image">
+          <img src="images/chihuahua.webp" alt="Chihuahua">
+        </div>
+        <div class="dog-info">
+          <p>Small and cute, barks a lot!</p>
+        </div>
+      </div>
+      <div class="dog-card">
+        <div class="dog-name">Siberian Husky</div>
+        <div class="dog-image">
+          <img src="images/siberian-husky.webp" alt="Siberian Husky">
+        </div>
+        <div class="dog-info">
+          <p>Energetic, big and a fluffy friend.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer> 
+    <div class="footer-container"> 
+      <div class="footer-left"> 
+        <p>Our Dog Friends</p> 
+        <p>Caracas</p> 
+        <p>Distrito Capital, Caracas 1050</p> 
+        <p>(+58) xxx-xxxx</p> 
+      </div> 
+      <div class="footer-center"> 
+        <a href="https://github.com/LivZas/" target="_blank"> 
+          <img src="images/github-logo.webp" alt="GitHub Logo"> 
+        </a> 
+        <a href="https://www.linkedin.com/in/lievelyn-zapata-66409628a/" target="_blank"> 
+          <img src="images/linkedin-logo.webp" alt="LinkedIn"> 
+        </a> 
+        <a href="https://www.facebook.com/" target="_blank"> 
+          <img src="images/facebook-logo.webp" alt="Facebook"> 
+        </a> 
+      </div> 
+      <div class="footer-right"> 
+        <p>WDD231 Final Project</p> 
+        <p>Lievelyn Zapata</p> 
+        <p>&copy; <span id="currentyear"></span>Our Dog Friends</p> 
+        <p id="lastModified"></p> 
+        <p><a href="attributions.html" class="attributions">Attributions</a></p>
+      </div> 
+    </div> 
+  </footer> 
+</body> 
+</html>
